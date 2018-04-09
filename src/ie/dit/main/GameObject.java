@@ -21,7 +21,7 @@ public abstract class GameObject {
 	
 	
 	//Now we must declare our getters and setters
-	//These are used to change the values of our variables
+	//These are used to change the values of our variables .
 
 	public void setX(int x) {
 		this.x = x;
