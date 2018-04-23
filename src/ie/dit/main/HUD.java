@@ -10,7 +10,7 @@ public class HUD  {
 	
 	public void tick() {
 		
-		HEALTH --;
+		
 		
 	}
 
@@ -26,6 +26,8 @@ public class HUD  {
 		
 		g.setColor(Color.white);
 		g.drawRect (15,15,HEALTH * 2,32);
+		
+		g.drawString(HEALTH+"%", 15, 13);
 	}
 
 	
