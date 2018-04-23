@@ -35,7 +35,11 @@ public class Game extends Canvas implements Runnable {
 		
 			
 		handler.addObject(new Player (WIDTH/2 - 32, HEIGHT/2 - 32, ID.Player)); //add a new player
-		handler.addObject(new Player (WIDTH/2 + 64, HEIGHT/2 - 32, ID.Player2)); //add a new player
+		for (int i = 0;i < 20; i ++)
+		{
+		handler.addObject(new BasicEnemy (r.nextInt(WIDTH),r.nextInt(HEIGHT), ID.BasicEnemy)); //add a new enemy
+		}
+		//handler.addObject(new Player (WIDTH/2 + 64, HEIGHT/2 - 32, ID.Player2)); //add a new player
 	}
 	
 	
@@ -115,6 +119,27 @@ public class Game extends Canvas implements Runnable {
 		 handler.render(g);
 		 g.dispose();
 		 bs.show();
+	}
+	
+	//the clamp method used to keep player on screen
+	public static int clamp (int var,int min,int max)
+	{
+		if(var >= max)
+		{
+			return var = max ;
+		}
+
+			else if (var <= min)
+			{
+				
+				return var = min ;
+				
+			}
+		
+			else
+			{
+				return var;
+			}
 	}
 	
 	public static void main (String args[])
