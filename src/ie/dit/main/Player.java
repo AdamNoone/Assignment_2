@@ -32,6 +32,8 @@ public class Player extends GameObject {
     x = Game.clamp(x,0, Game.WIDTH -47);
     y = Game.clamp(y,0, Game.HEIGHT -70);
     
+   //handler.addObject(new BasicEnemyTrail(x,y,ID.BasicEnemyTrail,Color.white,32,32,0.2f,handler));
+    
     collision();
 	}
 
