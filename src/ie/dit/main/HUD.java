@@ -9,6 +9,8 @@ public class HUD  {
  public static int HEALTH = 100;
  
  private int greenValue = 255;
+ private int score =0;
+ private int level =0;
 	
 	public void tick() {
 		HEALTH = Game.clamp(HEALTH, 0,100);
@@ -31,6 +33,9 @@ public class HUD  {
 		g.drawRect (15,15,HEALTH * 2,32);
 		
 		g.drawString(HEALTH+"%", 15, 13);
+		g.drawString("Score : " + score,15,64 );
+		g.drawString("Level : " + level,15,80 );
+		
 	}
 
 	
