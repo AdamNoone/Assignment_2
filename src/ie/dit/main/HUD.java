@@ -13,7 +13,7 @@ public static int HEALTH = 100;
  
  private int greenValue = 255;
  private int score =0;
- private int level =0;
+ private int level =1;
 	
 	public void tick() {
 		HEALTH = Game.clamp(HEALTH, 0,100);
