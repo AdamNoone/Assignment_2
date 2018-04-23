@@ -14,7 +14,7 @@ public class HUD  {
 		HEALTH = Game.clamp(HEALTH, 0,100);
 		greenValue = Game.clamp(greenValue, 0, 255);
 		
-		greenValue = HEALTH *2;
+		greenValue = HEALTH *2;//used to change color of health 
 	}
 
 	
