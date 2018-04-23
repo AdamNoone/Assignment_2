@@ -23,17 +23,17 @@ public class Game extends Canvas implements Runnable {
 	
 	public Game() 
 	{
+		handler = new Handler();
 		new Window(WIDTH,HEIGHT,"Assigment xx" ,this);
 		
 		
-		handler = new Handler();
+		
 				r = new Random();
 		
-		for ( int i = 0 ; i < 50 ;i ++) 
-		{
+		
 			
-		handler.addObject(new Player (r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.Player)); //add a new player
-		}
+		handler.addObject(new Player (WIDTH/2 - 32, HEIGHT/2 - 32, ID.Player)); //add a new player
+		
 	}
 	
 	
