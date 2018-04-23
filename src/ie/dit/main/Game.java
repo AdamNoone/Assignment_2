@@ -67,7 +67,7 @@ public class Game extends Canvas implements Runnable {
 	
 	public void run ()
 	{//the game loop
-			this.requestFocus(); //dont neede to click on window to have control
+			this.requestFocus(); //Don't need to click on window to have control
 		  long lastTime = System.nanoTime();
 	        double amountOfTicks = 60.0;
 	        double ns = 1000000000 / amountOfTicks;
