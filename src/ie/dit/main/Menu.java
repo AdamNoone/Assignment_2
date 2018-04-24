@@ -79,7 +79,7 @@ public class Menu extends MouseAdapter{
 			handler.addObject(new Player (Game.WIDTH/2 - 32, Game.HEIGHT/2 - 32, ID.Player,handler)); //add a new player
 			handler.clearEnemies();
 			
-			handler.addObject(new HardEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
+			//handler.addObject(new HardEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
 			
 			game.difficulty = 1;
 		}
@@ -95,7 +95,7 @@ public class Menu extends MouseAdapter{
 		}
 		}
 		
-		//back button
+		//back button in help
 				if(Game.gameState == STATE.Help)
 				{
 					if (mouseOver(mx,my,210,350,280,64))
@@ -110,16 +110,11 @@ public class Menu extends MouseAdapter{
 				{
 					if (mouseOver(mx,my,210,350,200,64))
 					{
-						Game.gameState = STATE.Game;
+						Game.gameState = STATE.Menu;
 						hud.setLevel(1);
 					    hud.setScore(0);
 						
-						
-						handler.addObject(new Player (Game.WIDTH/2 - 32, Game.HEIGHT/2 - 32, ID.Player,handler)); //add a new player
-						handler.clearEnemies();
-						
-						handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
-					
+					    	return;
 					
 					}
 				}

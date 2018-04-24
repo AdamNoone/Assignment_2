@@ -31,7 +31,11 @@ public class Spawn {
 			if(game.difficulty == 0)
 			{
 			
-			if (hud.getLevel() == 2)
+				if (hud.getLevel() == 1)
+				{
+					handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
+				}
+				else if (hud.getLevel() == 2)
 			{
 				handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
 			}
@@ -57,8 +61,16 @@ public class Spawn {
 			{
 				handler.addObject(new SmartEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.SmartEnemy,handler)); //add a new enemy
 			}	
-			
 			else if (hud.getLevel() == 8)
+			{
+				handler.addObject(new SmartEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.SmartEnemy,handler)); //add a new enemy
+			}	
+			else if (hud.getLevel() == 9)
+			{
+				handler.addObject(new SmartEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.SmartEnemy,handler)); //add a new enemy
+			}	
+			
+			else if (hud.getLevel() == 10)
 			{
 				handler.clearEnemies();
 				handler.addObject(new BossOne ((Game.WIDTH/2 )-48,-100, ID.BossOne,handler)); //add a new enemy
@@ -71,17 +83,17 @@ public class Spawn {
 			{
 				if (hud.getLevel() == 1)
 				{
-					handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
+					handler.addObject(new HardEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
 				}
 			
-			if (hud.getLevel() == 2)
+				else if (hud.getLevel() == 2)
 			{
-				handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
+				handler.addObject(new HardEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
 			}
 			
 			else if (hud.getLevel() == 3)
 			{
-				handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
+				handler.addObject(new HardEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
 			}
 			
 			else if (hud.getLevel() == 4)
@@ -102,6 +114,16 @@ public class Spawn {
 			}	
 			
 			else if (hud.getLevel() == 8)
+			{
+				handler.addObject(new SmartEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.SmartEnemy,handler)); //add a new enemy
+			}	
+			else if (hud.getLevel() == 9)
+			{
+				handler.addObject(new SmartEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.SmartEnemy,handler)); //add a new enemy
+			}	
+			
+			
+			else if (hud.getLevel() == 10)
 			{
 				handler.clearEnemies();
 				handler.addObject(new BossOne ((Game.WIDTH/2 )-48,-100, ID.BossOne,handler)); //add a new enemy

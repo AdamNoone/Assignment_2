@@ -8,12 +8,14 @@ public class HardEnemy extends GameObject {
 
 	
 	private Handler handler;
+	
+	
 	public HardEnemy(int x, int y, ID id,Handler handler) {
 		super(x, y, id);
 		
 		this.handler = handler;
-		velX = 5;
-		velY = 5;
+		velX = 10;
+		velY = 10;
 		
 	}
 
