@@ -25,6 +25,18 @@ public class MenuParticle extends GameObject {
 		velX = (r.nextInt(5 - -5) + -5);
 		velY = (r.nextInt(5 - -5) + -5);
 		
+		//if ensure particles on menu are always moving 
+		if (velX == 0 )
+		{
+			velX = 1;
+		}
+		
+		if (velY== 0 )
+		{
+			velY = 1;
+		}
+		
+		
 		col = new Color(r.nextInt(255),r.nextInt(255),r.nextInt(255));
 		
 	}
