@@ -26,6 +26,9 @@ public class Menu extends MouseAdapter{
 		int mx = e.getX();
 		int my = e.getY();
 		
+		if(game.gameState == STATE.Menu)
+		{
+			
 		
 		//play button
 		if (mouseOver(mx,my,210,150,280,64))
@@ -40,20 +43,23 @@ public class Menu extends MouseAdapter{
 		{
 			game.gameState = STATE.Help;
 		}
-		//back button
-		if(game.gameState == STATE.Help)
-		{
-			if (mouseOver(mx,my,210,350,280,64))
-			{
-				game.gameState = STATE.Menu;
-			}
-		}
+		
 		
 		//quit
 		if (mouseOver(mx,my,210,350,280,64))
 		{
 			System.exit(0);
 		}
+		}
+		
+		//back button
+				if(game.gameState == STATE.Help)
+				{
+					if (mouseOver(mx,my,210,350,280,64))
+					{
+						game.gameState = STATE.Menu;
+					}
+				}
 	}
 	
 	
@@ -123,12 +129,16 @@ public class Menu extends MouseAdapter{
 		
 		Font fnt = new Font("arial",1,50);
 		Font fnt2 = new Font("arial",1,30);
+		Font fnt3 = new Font("arial",1,20);
 		
 		g.setFont(fnt);
 		g.setColor(Color.white);
 		g.drawString("Help", 240, 70);
 		
-		g.setFont(fnt2);
+		g.setFont(fnt3);
+		g.drawString("You WASD to move player ansd dodge enemies", 50, 200);
+		
+		g.setFont(fnt3);
 		g.drawRect(210, 350, 200, 64);
 		g.drawString("Back", 270, 390);
 		}
