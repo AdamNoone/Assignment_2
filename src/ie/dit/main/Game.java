@@ -20,6 +20,7 @@ public class Game extends Canvas implements Runnable {
 	private boolean running = false;
 	
 	//public static boolean paused = false;
+	public int difficulty = 0; // 0 = normal and 1 = hard
 	
 	private Random r;
 	private Handler handler;
@@ -31,6 +32,7 @@ public class Game extends Canvas implements Runnable {
 		Menu ,
 		Help ,
 		Game,
+		Select,
 		End
 	};
 	
@@ -51,7 +53,7 @@ public class Game extends Canvas implements Runnable {
 		
 		
 		      
-		       spawner = new Spawn (handler ,hud);
+		       spawner = new Spawn (handler ,hud,this);
 		       
 				r = new Random();
 				
@@ -155,7 +157,7 @@ public class Game extends Canvas implements Runnable {
 		}
 		
 		
-		else if(gameState == STATE.Menu || gameState == STATE.End )
+		else if(gameState == STATE.Menu || gameState == STATE.End  || gameState == STATE.Select)
 		{
 			menu.tick();
 			
@@ -185,7 +187,7 @@ public class Game extends Canvas implements Runnable {
 			{
 			 hud.render(g);
 			}
-		 else if(gameState == STATE.Menu || gameState == STATE.End)
+		 else if(gameState == STATE.Menu || gameState == STATE.End || gameState == STATE.Select)
 			{
 				menu.render(g);
 			}

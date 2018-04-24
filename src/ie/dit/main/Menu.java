@@ -35,12 +35,13 @@ public class Menu extends MouseAdapter{
 		//play button
 		if (mouseOver(mx,my,210,150,280,64))
 		{
-			Game.gameState = STATE.Game;
-			handler.addObject(new Player (Game.WIDTH/2 - 32, Game.HEIGHT/2 - 32, ID.Player,handler)); //add a new player
-			handler.clearEnemies();
+			//Game.gameState = STATE.Game;
+			//handler.addObject(new Player (Game.WIDTH/2 - 32, Game.HEIGHT/2 - 32, ID.Player,handler)); //add a new player
+			//handler.clearEnemies();
 			
-			handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
-		
+			//handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
+			game.gameState = STATE.Select;
+			return;
 		}
 		//help
 		if (mouseOver(mx,my,210,250,280,64))
@@ -53,6 +54,44 @@ public class Menu extends MouseAdapter{
 		if (mouseOver(mx,my,210,350,280,64))
 		{
 			System.exit(0);
+		}
+		}
+		
+		if(Game.gameState == STATE.Select)
+		{
+			
+		
+		//normal button
+		if (mouseOver(mx,my,210,150,280,64))
+		{
+			Game.gameState = STATE.Game;
+			handler.addObject(new Player (Game.WIDTH/2 - 32, Game.HEIGHT/2 - 32, ID.Player,handler)); //add a new player
+			handler.clearEnemies();
+			
+			handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
+			
+			game.difficulty = 0;
+		}
+		//hard
+		if (mouseOver(mx,my,210,250,280,64))
+		{
+			Game.gameState = STATE.Game;
+			handler.addObject(new Player (Game.WIDTH/2 - 32, Game.HEIGHT/2 - 32, ID.Player,handler)); //add a new player
+			handler.clearEnemies();
+			
+			handler.addObject(new HardEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
+			
+			game.difficulty = 1;
+		}
+		
+		
+		//back
+		if (mouseOver(mx,my,210,350,280,64))
+		{
+			
+				Game.gameState = STATE.Menu;
+				return;
+			
 		}
 		}
 		
@@ -185,6 +224,31 @@ public class Menu extends MouseAdapter{
 		g.setFont(fnt2);
 		g.drawRect(210, 350, 200, 64);
 		g.drawString("Try Again", 245, 390);
+		}
+		else if(Game.gameState == STATE.Select)
+		{
+			
+		
+		Font fnt = new Font("arial",1,50);
+		Font fnt2 = new Font("arial",1,30);
+		
+		g.setFont(fnt);
+		g.setColor(Color.white);
+		g.drawString("SLECT DIFFICULTY", 140, 70);
+		
+		
+		g.setFont(fnt2);
+		
+		g.drawRect(210, 150, 200, 64);
+		g.drawString("Normal", 270, 190);
+		
+		
+		g.drawRect(210, 250, 200, 64);
+		g.drawString("Hard", 270, 290);
+		
+		
+		g.drawRect(210, 350, 200, 64);
+		g.drawString("Back", 270, 390);
 		}
 		
 	}
