@@ -16,13 +16,24 @@ public class AudioPlayer {
 	public static void load() 
 	{
 		try {
-			soundMap.put("menu_sound", new Sound("resources/Select8-Bit.oog"));
-			musicMap.put("music", new Music("resources/01.Forever-Bound-Stereo-Madness.oog"));
+			soundMap.put("menu_sound", new Sound("resources/click.ogg"));
+			musicMap.put("music", new Music("resources/background.ogg"));
 		} catch (SlickException e)
 		{
 			e.printStackTrace();
+			
+			
 		}
 
+	}
+
+	public static Music getMusic(String key)
+	{
+		return musicMap.get(key);
+	}
+	public static Sound getSound(String key)
+	{
+		return soundMap.get(key);
 	}
 
 
