@@ -7,6 +7,7 @@ public enum ID {
      SmartEnemy(),
      BossOne(),
      EnemyBossBullet(),
+     MenuParticle(),
 	BasicEnemyTrail();
 	//Player2(),
 	//

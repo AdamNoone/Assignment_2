@@ -55,9 +55,15 @@ public class Game extends Canvas implements Runnable {
 				
 				}
 				
+				else 
+				{
+					for (int i = 0 ; i < 10 ;i ++)
+					{
+						handler.addObject(new MenuParticle(r.nextInt(WIDTH),r.nextInt(HEIGHT),ID.MenuParticle,handler));
+					}
+				}
 				
-		
-		
+	
 			
 			
 	}

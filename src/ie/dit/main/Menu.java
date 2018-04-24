@@ -138,7 +138,7 @@ public class Menu extends MouseAdapter{
 		g.setFont(fnt3);
 		g.drawString("You WASD to move player ansd dodge enemies", 50, 200);
 		
-		g.setFont(fnt3);
+		g.setFont(fnt2);
 		g.drawRect(210, 350, 200, 64);
 		g.drawString("Back", 270, 390);
 		}
