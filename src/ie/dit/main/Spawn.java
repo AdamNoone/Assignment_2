@@ -21,14 +21,14 @@ public class Spawn {
 	
 		scoreKeep++;
 		
-		if (scoreKeep >= 300)
+		if (scoreKeep >= 100)
 		{
 			scoreKeep = 0;
 			hud.setLevel(hud.getLevel() + 1);
 			
 			if (hud.getLevel() == 2)
 			{
-				handler.addObject(new BossOne (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BossOne,handler)); //add a new enemy
+				handler.addObject(new BossOne ((Game.WIDTH/2 )-48,-100, ID.BossOne,handler)); //add a new enemy
 			}
 			
 			/*else if (hud.getLevel() == 3)
