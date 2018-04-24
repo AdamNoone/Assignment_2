@@ -59,6 +59,17 @@ public class BossOne extends GameObject {
 			{
 				velX = 2;
 			}
+			
+			if(velX > 0)
+			{
+				velX += 0.05f;
+			}
+			else if (velX < 0)
+			{
+				velX -= 0.05f;
+			}
+			
+			velX = Game.clamp(velX ,-10,10);
 				int spawn = r.nextInt(10);
 				if (spawn ==0)
 				{
