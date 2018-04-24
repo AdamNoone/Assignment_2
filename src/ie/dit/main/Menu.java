@@ -30,17 +30,25 @@ public class Menu extends MouseAdapter{
 	{
 		
 		Font fnt = new Font("arial",1,50);
+		
+		Font fnt2 = new Font("arial",1,30);
+		
 		g.setFont(fnt);
 		g.setColor(Color.white);
 		g.drawString("Menu", 240, 70);
 		
-		g.setColor(Color.white);
+		
+		g.setFont(fnt2);
+		
 		g.drawRect(210, 150, 200, 64);
+		g.drawString("Play", 270, 190);
 		
-		g.setColor(Color.white);
+		
 		g.drawRect(210, 250, 200, 64);
+		g.drawString("Help", 270, 290);
 		
-		g.setColor(Color.white);
+		
 		g.drawRect(210, 350, 200, 64);
+		g.drawString("Quit", 270, 390);
 	}
 }
