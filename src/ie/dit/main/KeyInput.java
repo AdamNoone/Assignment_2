@@ -3,14 +3,23 @@ package ie.dit.main;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+import ie.dit.main.Game.STATE;
+
 public class KeyInput extends KeyAdapter {
 
 	
 	private Handler handler;
 	private boolean[] keyDown = new boolean[4];//this boolean array is used to solve my sticky keys problem when player freezes during a direction change 
+	
+	//Game game;
+	
 	public KeyInput(Handler handler)
 	{
 		this.handler = handler;
+		
+		
+		//game = new Game();
+		
 		keyDown[0] = false;
 		keyDown[1] = false;
 		keyDown[2] = false;
@@ -34,16 +43,22 @@ public class KeyInput extends KeyAdapter {
 								if (key == KeyEvent.VK_D) tempObject.setVelX(5);
 			}
 			
-			/*if (tempObject.getId() == ID.Player2) 
-			{
-				//keys for player 1
-				
-				if (key == KeyEvent.VK_UP) tempObject.setVelY(-5);
-				if (key == KeyEvent.VK_LEFT) tempObject.setVelX(-5);
-				if (key == KeyEvent.VK_DOWN) tempObject.setVelY(5);
-				if (key == KeyEvent.VK_RIGHT) tempObject.setVelX(5);
-			}*/
+		
 		}
+		/*if (key == KeyEvent.VK_P)
+		{
+			if(game.gameState == STATE.Game )
+			{
+			if(Game.paused)
+			{
+				Game.paused = false;
+			}
+			else 
+			{
+				Game.paused = true;
+			}
+		}
+		}*/
 		if (key == KeyEvent.VK_ESCAPE) System.exit(1);
 	}
 	
@@ -64,15 +79,7 @@ public class KeyInput extends KeyAdapter {
 								if (key == KeyEvent.VK_S) tempObject.setVelY(0);
 								if (key == KeyEvent.VK_D) tempObject.setVelX(0);
 			
-			/*if (tempObject.getId() == ID.Player2) 
-			{
-				//keys for player 1
-				
-				if (key == KeyEvent.VK_UP) tempObject.setVelY(0);
-				if (key == KeyEvent.VK_LEFT) tempObject.setVelX(0);
-				if (key == KeyEvent.VK_DOWN) tempObject.setVelY(0);
-				if (key == KeyEvent.VK_RIGHT) tempObject.setVelX(0);
-			}*/
+		
 			
 			
 		
