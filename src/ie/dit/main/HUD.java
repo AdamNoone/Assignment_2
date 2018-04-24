@@ -9,17 +9,17 @@ public class HUD  {
 
 
 
-public static int HEALTH = 100;
+public static float HEALTH = 100;
  
  private int greenValue = 255;
  private int score =0;
  private int level =1;
 	
 	public void tick() {
-		HEALTH = Game.clamp(HEALTH, 0,100);
-		greenValue = Game.clamp(greenValue, 0, 255);
+		HEALTH = (int) Game.clamp(HEALTH, 0,100);
+		greenValue = (int) Game.clamp(greenValue, 0, 255);
 		
-		greenValue = HEALTH *2;//used to change color of health 
+		greenValue = (int) (HEALTH *2);//used to change color of health 
 		score ++;
 	}
 
@@ -30,11 +30,11 @@ public static int HEALTH = 100;
 		g.fillRect (15,15,200,32);
 		
 		g.setColor(new Color(75,greenValue,0));
-		g.fillRect (15,15,HEALTH * 2,32);
+		g.fillRect (15,15,(int)HEALTH * 2,32);
 		
 		
 		g.setColor(Color.white);
-		g.drawRect (15,15,HEALTH * 2,32);
+		g.drawRect (15,15,(int)HEALTH * 2,32);
 		
 		g.drawString(HEALTH+"%", 15, 13);
 		g.drawString("Score : " + score,15,64 );

@@ -21,7 +21,7 @@ public class Handler {
 	{
 		for (int i = 0 ;i < object.size();i++) 
 		{
-			GameObject tempObject = object.get(i);//temp becomes the current object 
+			GameObject tempObject = object.get(i);//temp becomes the current object
 			
 			tempObject.render(g);
 		}

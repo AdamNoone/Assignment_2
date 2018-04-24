@@ -129,7 +129,7 @@ public class Game extends Canvas implements Runnable {
 	}
 	
 	//the clamp method used to keep player on screen
-	public static int clamp (int var,int min,int max)
+	public static float clamp (float var,float min,float max)
 	{
 		if(var >= max)
 		{

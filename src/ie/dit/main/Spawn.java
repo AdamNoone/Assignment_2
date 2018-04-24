@@ -40,6 +40,18 @@ public class Spawn {
 			{
 				handler.addObject(new FastEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.FastEnemy,handler)); //add a new enemy
 			}
+			else if (hud.getLevel() == 5)
+			{
+				handler.addObject(new SmartEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.SmartEnemy,handler)); //add a new enemy
+			}
+			else if (hud.getLevel() == 6)
+			{
+				handler.addObject(new SmartEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.SmartEnemy,handler)); //add a new enemy
+			}
+			else if (hud.getLevel() == 7)
+			{
+				handler.addObject(new SmartEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.SmartEnemy,handler)); //add a new enemy
+			}
 		}
 		}
 	}
