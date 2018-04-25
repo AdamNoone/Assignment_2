@@ -39,6 +39,7 @@ public static float HEALTH = 100;
 		g.drawString(HEALTH+"%", 15, 13);
 		g.drawString("Score : " + score,15,64 );
 		g.drawString("Level : " + level,15,80 );
+		g.drawString("Press Space to Shop" + level,15,94 );
 		
 	}
 

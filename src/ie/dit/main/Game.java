@@ -27,11 +27,13 @@ public class Game extends Canvas implements Runnable {
 	private HUD hud;
 	private Spawn spawner;
 	private Menu menu;
+	private Shop shop;
 	
 	public enum STATE {
 		Menu ,
 		Help ,
 		Game,
+		Shop,
 		Select,
 		End
 	};
@@ -42,6 +44,7 @@ public class Game extends Canvas implements Runnable {
 	{
 		handler = new Handler();
 		 hud = new HUD();
+		 shop = new Shop(handler);
 		menu = new Menu(this,handler,hud);
 		this.addKeyListener(new KeyInput(handler));
 		this.addMouseListener(menu);
@@ -180,16 +183,23 @@ public class Game extends Canvas implements Runnable {
 		 g.setColor(Color.black);
 		 g.fillRect(0, 0, WIDTH, HEIGHT);
 		 
-		 handler.render(g);
+		 
 		 
 		 
 		 if(gameState == STATE.Game)
 			{
 			 hud.render(g);
+			 handler.render(g);
+			}
+		 
+		 if(gameState == STATE.Shop)
+			{
+			 shop.render(g);
 			}
 		 else if(gameState == STATE.Menu || gameState == STATE.End || gameState == STATE.Select)
 			{
 				menu.render(g);
+				handler.render(g);
 			}
 		 
 		 else if(gameState == STATE.Help)
