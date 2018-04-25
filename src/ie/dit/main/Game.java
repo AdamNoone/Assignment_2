@@ -48,6 +48,7 @@ public class Game extends Canvas implements Runnable {
 		menu = new Menu(this,handler,hud);
 		this.addKeyListener(new KeyInput(handler));
 		this.addMouseListener(menu);
+		this.addMouseListener(shop);
 		
 		AudioPlayer.load();
 		AudioPlayer.getMusic("music").loop();

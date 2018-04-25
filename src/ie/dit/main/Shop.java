@@ -48,14 +48,42 @@ public class Shop extends MouseAdapter {
 		
 		
 		//show the score 
-				g.drawString("Score" + hud.getScore(), Game.WIDTH/2-50, 310);
+				g.drawString("Score " + hud.getScore(), Game.WIDTH/2-50, 310);
 				g.drawString("Press Space to return to the Game", Game.WIDTH/2-50, 340);
-		
-		
+				
+	
 	}
 	
 	public void mousePressed (MouseEvent e)
 	{
+		int mx = e.getX();
+		int my = e.getY();
+		
+		if (mx >=100 && mx <=200)
+		{
+			if (my >=100 && my <=180)
+			{
+				System.out.println("Box 1");
+			}
+		}
+		
+		if (mx >=250 && mx <=350)
+		{
+			if (my >=100 && my <=180)
+			{
+				System.out.println("Box 2");
+			}
+		}
+		
+		if (mx >=400 && mx <=500)
+		{
+			if (my >=100 && my <=180)
+			{
+				System.out.println("Box 3");
+			}
+		}
+		
+		
 		
 	}
 }
