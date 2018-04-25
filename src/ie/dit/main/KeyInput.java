@@ -37,10 +37,10 @@ public class KeyInput extends KeyAdapter {
 			{
 				//keys for player 1
 				
-				                if (key == KeyEvent.VK_W) tempObject.setVelY(-5);
-								if (key == KeyEvent.VK_A) tempObject.setVelX(-5);
-								if (key == KeyEvent.VK_S) tempObject.setVelY(5);
-								if (key == KeyEvent.VK_D) tempObject.setVelX(5);
+				                if (key == KeyEvent.VK_W) tempObject.setVelY(-handler.speed);
+								if (key == KeyEvent.VK_A) tempObject.setVelX(-handler.speed);
+								if (key == KeyEvent.VK_S) tempObject.setVelY(handler.speed);
+								if (key == KeyEvent.VK_D) tempObject.setVelX(handler.speed);
 			}
 			
 		

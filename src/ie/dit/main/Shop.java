@@ -58,32 +58,52 @@ public class Shop extends MouseAdapter {
 	{
 		int mx = e.getX();
 		int my = e.getY();
-		
+		//box 1
 		if (mx >=100 && mx <=200)
 		{
 			if (my >=100 && my <=180)
 			{
-				System.out.println("Box 1");
+				if (hud.getScore() >= B1)
+				{
+					hud.setScore(hud.getScore() - B1);
+					B1 += 1000;
+					hud.bounds += 20;
+					HUD.HEALTH = (100 + (hud.bounds /2));
+				}
 			}
 		}
 		
+		//box2
 		if (mx >=250 && mx <=350)
 		{
 			if (my >=100 && my <=180)
 			{
-				System.out.println("Box 2");
+				if (hud.getScore() >= B2)
+				{
+					hud.setScore(hud.getScore() - B2);
+					B2 += 1000;
+					handler.speed += 2;
+					
+				}
 			}
 		}
 		
+//box 3
 		if (mx >=400 && mx <=500)
 		{
 			if (my >=100 && my <=180)
 			{
-				System.out.println("Box 3");
+				if (hud.getScore() >= B3)
+				{
+					hud.setScore(hud.getScore() - B3);
+				
+					HUD.HEALTH = (100 + (hud.bounds /2));
+				}
+				}
 			}
 		}
 		
 		
 		
 	}
-}
+

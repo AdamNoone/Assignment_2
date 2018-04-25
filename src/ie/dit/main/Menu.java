@@ -194,7 +194,8 @@ public class Menu extends MouseAdapter{
 		g.drawString("Help", 240, 70);
 		
 		g.setFont(fnt3);
-		g.drawString("You WASD to move player and dodge enemies", 50, 200);
+		g.drawString("Use WASD to move player and dodge enemies", 80, 200);
+		g.drawString("Use Space to get upgrades for your player", 80, 230);
 		
 		g.setFont(fnt2);
 		g.drawRect(210, 350, 200, 64);
