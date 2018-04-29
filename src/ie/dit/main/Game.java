@@ -53,7 +53,7 @@ public class Game extends Canvas implements Runnable {
 		AudioPlayer.load();
 		AudioPlayer.getMusic("music").loop();
 		
-		new Window(WIDTH,HEIGHT,"Assigment xx" ,this);
+		new Window(WIDTH,HEIGHT,"Assignment xx" ,this);
 		
 		
 		      

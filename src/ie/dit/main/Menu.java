@@ -113,6 +113,7 @@ public class Menu extends MouseAdapter{
 						Game.gameState = STATE.Menu;
 						hud.setLevel(1);
 					    hud.setScore(0);
+					    handler.clearEnemies();
 						
 					    	return;
 					
@@ -230,7 +231,7 @@ public class Menu extends MouseAdapter{
 		
 		g.setFont(fnt);
 		g.setColor(Color.white);
-		g.drawString("SLECT DIFFICULTY", 140, 70);
+		g.drawString("SELECT DIFFICULTY", 100, 70);
 		
 		
 		g.setFont(fnt2);

@@ -11,7 +11,7 @@ public class HUD  {
 public int bounds  = 0;
 public static float HEALTH = 100;
  
- private int greenValue = 255;
+ private int greenValue = 253;
  private int score =0;
  private int level =1;
 	
@@ -19,8 +19,14 @@ public static float HEALTH = 100;
 		greenValue = (int) Game.clamp(greenValue, 0, 255);
 		HEALTH = (int) Game.clamp(HEALTH, 0,100 +(bounds/2));
 		
-		
+		if (greenValue < 255)
+		{
 		greenValue = (int) (HEALTH *2);//used to change color of health 
+		}
+		else
+		{
+			greenValue = 253;
+		}
 		score ++;
 	}
 
