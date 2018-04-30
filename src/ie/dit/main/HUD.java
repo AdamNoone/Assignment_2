@@ -27,6 +27,7 @@ public static float HEALTH = 100; //players health starts at 100
 	
 	public void render(Graphics g) {
 		
+		//drawing the health bar 
 		g.setColor(Color.gray);
 		g.fillRect (15,15,200 + bounds,32);
 		 
@@ -37,6 +38,7 @@ public static float HEALTH = 100; //players health starts at 100
 		g.setColor(Color.white);
 		g.drawRect (15,15,200 + bounds,32);
 		
+		//display players stats 
 		g.drawString(HEALTH+"%", 15, 13);
 		g.drawString("Score : " + score,15,64 );
 		g.drawString("Level : " + level,15,80 );
@@ -44,6 +46,8 @@ public static float HEALTH = 100; //players health starts at 100
 		
 	}
 
+	// declared my getters and setters
+	// Which are used to change the values of our variables .
 	 public int getScore() {
 			return score;
 		}

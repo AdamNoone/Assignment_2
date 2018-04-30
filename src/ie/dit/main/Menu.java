@@ -10,7 +10,7 @@ import java.util.Random;
 
 import ie.dit.main.Game.STATE;
 
-public class Menu extends MouseAdapter{
+public class Menu extends MouseAdapter{ //need to extend mouseAdapter so we can get input fork mouse and keyboard 
 
 	Game game;
 	private Handler handler;
@@ -26,36 +26,31 @@ public class Menu extends MouseAdapter{
 	
 	public void mousePressed(MouseEvent e)
 	{
-		int mx = e.getX();
-		int my = e.getY();
+		int mx = e.getX(); //get x co_ord pressed on screen 
+		int my = e.getY(); //get y co_ord pressed on screen 
 		
-		if(Game.gameState == STATE.Menu)
+		if(Game.gameState == STATE.Menu) //when game is in menu state 
 		{
 			
 		
 		//play button
 		if (mouseOver(mx,my,210,150,280,64))
 		{
-			//Game.gameState = STATE.Game;
-			//handler.addObject(new Player (Game.WIDTH/2 - 32, Game.HEIGHT/2 - 32, ID.Player,handler)); //add a new player
-			//handler.clearEnemies();
 			
-			//handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
-			
-			game.gameState = STATE.Select;
+			game.gameState = STATE.Select; //change game state to select 
 			return;
 		}
 		//help
 		if (mouseOver(mx,my,210,250,280,64))
 		{
-			Game.gameState = STATE.Help;
+			Game.gameState = STATE.Help;  //change game state to help
 		}
 		
 		
 		//quit
 		if (mouseOver(mx,my,210,350,280,64))
 		{
-			System.exit(0);
+			System.exit(0); //close the game 
 		}
 		}
 		
@@ -66,22 +61,22 @@ public class Menu extends MouseAdapter{
 		//normal button
 		if (mouseOver(mx,my,210,150,280,64))
 		{
-			Game.gameState = STATE.Game;
+			Game.gameState = STATE.Game;  //change game state to game 
 			handler.addObject(new Player (Game.WIDTH/2 - 32, Game.HEIGHT/2 - 32, ID.Player,handler)); //add a new player
-			handler.clearEnemies();
+			handler.clearEnemies();//clear enemies from screen 
 			
 			handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
 			
-			game.difficulty = 0;
+			game.difficulty = 0; 
 		}
 		//hard
 		if (mouseOver(mx,my,210,250,280,64))
 		{
-			Game.gameState = STATE.Game;
+			Game.gameState = STATE.Game;  //change game state to game
 			handler.addObject(new Player (Game.WIDTH/2 - 32, Game.HEIGHT/2 - 32, ID.Player,handler)); //add a new player
 			handler.clearEnemies();
 			
-			//handler.addObject(new HardEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
+			handler.addObject(new HardEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
 			
 			game.difficulty = 1;
 		}
@@ -91,7 +86,7 @@ public class Menu extends MouseAdapter{
 		if (mouseOver(mx,my,210,350,280,64))
 		{
 			
-				Game.gameState = STATE.Menu;
+				Game.gameState = STATE.Menu;  //change game state to menu
 				return;
 			
 		}
@@ -102,7 +97,7 @@ public class Menu extends MouseAdapter{
 				{
 					if (mouseOver(mx,my,210,350,280,64))
 					{
-						Game.gameState = STATE.Menu;
+						Game.gameState = STATE.Menu;  //change game state to menu
 						return;
 					}
 				}
@@ -112,10 +107,10 @@ public class Menu extends MouseAdapter{
 				{
 					if (mouseOver(mx,my,210,350,200,64))
 					{
-						Game.gameState = STATE.Menu;
-						hud.setLevel(1);
-					    hud.setScore(0);
-					    handler.clearEnemies();
+						Game.gameState = STATE.Menu; //change game state to menu
+						hud.setLevel(1); //set level back to 1 
+					    hud.setScore(0); //set level back to 0
+					    handler.clearEnemies(); //clear all enemies
 					    
 					    
 					  
@@ -163,7 +158,7 @@ public class Menu extends MouseAdapter{
 	{
 		if(Game.gameState == STATE.Menu)
 		{
-			
+			//draw menu and all its options 
 		
 		Font fnt = new Font("arial",1,50);
 		Font fnt2 = new Font("arial",1,30);
@@ -193,7 +188,7 @@ public class Menu extends MouseAdapter{
 		else if(Game.gameState == STATE.Help)
 		{
 			
-		
+			//draw help menu and all its information
 		Font fnt = new Font("arial",1,50);
 		Font fnt2 = new Font("arial",1,30);
 		Font fnt3 = new Font("arial",1,20);
@@ -216,7 +211,7 @@ public class Menu extends MouseAdapter{
 		else if(Game.gameState == STATE.End)
 		{
 			
-		
+			//draw end screen
 		Font fnt = new Font("arial",1,50);
 		Font fnt2 = new Font("arial",1,30);
 		Font fnt3 = new Font("arial",1,20);
@@ -236,8 +231,7 @@ public class Menu extends MouseAdapter{
 		}
 		else if(Game.gameState == STATE.Select)
 		{
-			
-		
+			//draw menu that allows user to select there game difficulty 
 		Font fnt = new Font("arial",1,50);
 		Font fnt2 = new Font("arial",1,30);
 		
