@@ -5,9 +5,9 @@ import java.awt.Graphics;
 import java.util.LinkedList;
 
 public class Handler {
-	LinkedList <GameObject> object = new LinkedList<GameObject>();
+	LinkedList <GameObject> object = new LinkedList<GameObject>(); //Make an array list of all the gameobjects 
 	
-	public int speed = 5;
+	public int speed = 5; //speed of all game objects is 5
 	public void tick()
 	{
 		for (int i = 0 ;i < object.size();i++) 
@@ -29,7 +29,7 @@ public class Handler {
 		}
 	}
 	
-	public void clearEnemies()
+	public void clearEnemies() //get rid of all the enemies on screen 
 	{
 		for (int i = 0 ;i < object.size();i++) 
 		{
@@ -37,10 +37,10 @@ public class Handler {
 			
 			if(tempObject.getId() == ID.Player)
 			{
-				object.clear();
+				object.clear();//clear each object 
 				if(Game.gameState != Game.STATE.End)
 				{
-				addObject(new Player ((int)tempObject.getX(),(int)tempObject.getY(),ID.Player,this));
+				addObject(new Player ((int)tempObject.getX(),(int)tempObject.getY(),ID.Player,this)); //adds a player if game  state not at end (used this to fix bug )
 				}
 			}
 			

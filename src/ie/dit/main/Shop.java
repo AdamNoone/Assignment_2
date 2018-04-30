@@ -25,6 +25,7 @@ public class Shop extends MouseAdapter {//need to extend mouseAdapter so we can 
 	
 	public void render (Graphics g)
 	{
+		///just draw the shop 
 		g.setColor(Color.white);
 		g.setFont(new Font ("arial",0,48));
 		g.drawString("SHOP", Game.WIDTH/2-80, 50);
@@ -62,8 +63,8 @@ public class Shop extends MouseAdapter {//need to extend mouseAdapter so we can 
 	
 	public void mousePressed (MouseEvent e)
 	{
-		int mx = e.getX();
-		int my = e.getY();
+		int mx = e.getX(); // x co-ords of mouse press
+		int my = e.getY(); // y co-ords of mouse press
 		//box 1
 		if (mx >=100 && mx <=200)
 		{
@@ -72,15 +73,16 @@ public class Shop extends MouseAdapter {//need to extend mouseAdapter so we can 
 				if (hud.getScore() >= B1)
 				{
 					hud.setScore(hud.getScore() - B1);
+					//user can buy upgrade 3 times 
 					if (B1 < 2501)
 					{
-					B1 += 1000;
+					B1 += 1000; //cost goes up by 100 each time they buy upgrade
 					hud.bounds += 20;
-					HUD.HEALTH = (100 + (hud.bounds /2));
+					HUD.HEALTH = (100 + (hud.bounds /2)); //increase the amount of health 
 					}
 					else
 					{
-						B1 += 100000;
+						B1 += 100000;//increment by large number so user cant upgrade again 
 						
 						hud.bounds += 0;
 					}
@@ -96,9 +98,9 @@ public class Shop extends MouseAdapter {//need to extend mouseAdapter so we can 
 			{
 				if (hud.getScore() >= B2)
 				{
-					hud.setScore(hud.getScore() - B2);
-					B2 += 1000;
-					handler.speed += 2;
+					hud.setScore(hud.getScore() - B2); 
+					B2 += 1000;//cost goes up by 100 each time they buy upgrade
+					handler.speed += 2; //Increase player speed 
 					
 				}
 			}
@@ -113,7 +115,7 @@ public class Shop extends MouseAdapter {//need to extend mouseAdapter so we can 
 				{
 					hud.setScore(hud.getScore() - B3);
 				
-					HUD.HEALTH = (100 + (hud.bounds /2));
+					HUD.HEALTH = (100 + (hud.bounds /2));//refill players health 
 				}
 				}
 			}
