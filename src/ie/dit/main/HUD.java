@@ -10,25 +10,18 @@ public class HUD  {
 
 
 public int bounds  = 0;
-public static float HEALTH = 100;
+public static float HEALTH = 100; //players health starts at 100 
  
- private int greenValue = 253;
- private int score =0;
- private int level =1;
+ private int greenValue = 253; //color of the player health will change as health decreases
+ private int score =0; //players score starts at 0
+ private int level =1;//player starts on level 1
 	
 	public void tick() {
-		greenValue = (int) Game.clamp(greenValue, 0, 255);
-		HEALTH = (int) Game.clamp(HEALTH, 0,100 +(bounds/2));
+		greenValue = (int) Game.clamp(greenValue, 0, 255); //rbg value of green cant be more that 255
+		HEALTH = (int) Game.clamp(HEALTH, 0,600); //ensure players health doesn't overflow the bounds of the actual health bar rectangle 
 		
-		if (greenValue < 255)
-		{
-		greenValue = (int) (HEALTH *2);//used to change color of health 
-		}
-		else
-		{
-			greenValue = 253;
-		}
-		score ++;
+		
+		score ++;//increase the score as player is still alive 
 	}
 
 	

@@ -11,7 +11,7 @@ public abstract class GameObject {
 	protected float velX,velY;
 
 	
-	public GameObject(float x, float y ,ID id)
+	public GameObject(float x, float y ,ID id) //gameobject method and vars that need to be passed in 
 	{
 		this.x = x;
 		this.y = y;
@@ -24,8 +24,8 @@ public abstract class GameObject {
 
 	
 	
-	//Now we must declare our getters and setters
-	//These are used to change the values of our variables .
+	// declared my getters and setters
+	//Which are used to change the values of our variables .
 
 	public void setX(int x) {
 		this.x = x;
