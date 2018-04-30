@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-public class HardEnemy extends GameObject {
+public class HardEnemy extends GameObject { //LOOK AT BASIC ENEMY COMMENTS EVERYTHING IS THE SAME EXCEPT ENEMY VELOCITY 
 
 	
 	private Handler handler;

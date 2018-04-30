@@ -31,16 +31,16 @@ public class KeyInput extends KeyAdapter {
 		
 		for (int i = 0 ;i < handler.object.size();i++)
 		{
-			GameObject tempObject = handler.object.get(i);
+			GameObject tempObject = handler.object.get(i);//get the player game object 
 			
 			if (tempObject.getId() == ID.Player) 
 			{
 				//keys for player 1
 				
-				                if (key == KeyEvent.VK_W) tempObject.setVelY(-handler.speed);
-								if (key == KeyEvent.VK_A) tempObject.setVelX(-handler.speed);
-								if (key == KeyEvent.VK_S) tempObject.setVelY(handler.speed);
-								if (key == KeyEvent.VK_D) tempObject.setVelX(handler.speed);
+				                if (key == KeyEvent.VK_W) tempObject.setVelY(-handler.speed);// W moves up
+								if (key == KeyEvent.VK_A) tempObject.setVelX(-handler.speed);// A moves left
+								if (key == KeyEvent.VK_S) tempObject.setVelY(handler.speed);// S moves down
+								if (key == KeyEvent.VK_D) tempObject.setVelX(handler.speed);// D moves right
 			}
 			
 		
@@ -59,9 +59,9 @@ public class KeyInput extends KeyAdapter {
 			}
 		}
 		}*/
-		if (key == KeyEvent.VK_ESCAPE) System.exit(1);
+		if (key == KeyEvent.VK_ESCAPE) System.exit(1); //press escape to exit game 
 		
-		if (key == KeyEvent.VK_SPACE)
+		if (key == KeyEvent.VK_SPACE) //press space to enter the shop
 		{
 			if(Game.gameState == STATE.Game)
 			{
@@ -87,10 +87,10 @@ public class KeyInput extends KeyAdapter {
 			{
 				//keys for player 1
 				
-								if (key == KeyEvent.VK_W) tempObject.setVelY(0);
-								if (key == KeyEvent.VK_A) tempObject.setVelX(0);
-								if (key == KeyEvent.VK_S) tempObject.setVelY(0);
-								if (key == KeyEvent.VK_D) tempObject.setVelX(0);
+								if (key == KeyEvent.VK_W) tempObject.setVelY(0);// Release to stop moving 
+								if (key == KeyEvent.VK_A) tempObject.setVelX(0);// Release to stop moving 
+								if (key == KeyEvent.VK_S) tempObject.setVelY(0);// Release to stop moving 
+								if (key == KeyEvent.VK_D) tempObject.setVelX(0);// Release to stop moving 
 			
 		
 			

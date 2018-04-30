@@ -5,19 +5,20 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.Random;
 
-public class BossOne extends GameObject {
+public class BossOne extends GameObject { //is a game object 
 
 	
 	private Handler handler;
-	private int timer = 80;
-	private int timer2 = 50;
+	//timers used to decide when boss descends 
+	private int timer = 80; //timer 1 used to decend boss
+	private int timer2 = 50; //timer 2 used to decide when boss starts moving left and right 
 	Random r = new Random();
-	public BossOne(int x, int y, ID id,Handler handler) {
+	public BossOne(int x, int y, ID id,Handler handler) {//constructor
 		super(x, y, id);
 		
 		this.handler = handler;
 		velX = 0;
-		velY = 2;
+		velY = 2; //only moves left and right 
 		
 	}
 
@@ -31,9 +32,9 @@ public class BossOne extends GameObject {
 		x += velX;
 		y += velY;
 		
-		//so i want to make the boos stop in the middle of the screen 
+		//so i want to make the boss stop in the middle of the screen  and then start moving 
 		
-		if (timer <=0 ) 
+		if (timer <=0 )  //if the timer expires 
 		{
 			velY = 0;
 			
@@ -46,14 +47,14 @@ public class BossOne extends GameObject {
 		}
 		
 		
-		if (timer <=0 ) 
+		if (timer <=0 )  //if the timer expires 
 		{
 			timer2--;
 			
 			
 		}
 		
-		if (timer2 <=0 ) 
+		if (timer2 <=0 ) //if the timer expires 
 		{
 			if(velX == 0 )
 			{
@@ -69,11 +70,11 @@ public class BossOne extends GameObject {
 				velX -= 0.05f;
 			}
 			
-			velX = Game.clamp(velX ,-10,10);
+			velX = Game.clamp(velX ,-10,10); //boss cant go outside window 
 				int spawn = r.nextInt(10);
 				if (spawn ==0)
 				{
-					handler.addObject(new EnemyBossBullet((int)x + 48,(int)y + 48,ID.BasicEnemy,handler));
+					handler.addObject(new EnemyBossBullet((int)x + 48,(int)y + 48,ID.BasicEnemy,handler)); //spawn the bosses bullets 
 				}
 			
 			
@@ -82,7 +83,7 @@ public class BossOne extends GameObject {
 		
 		
 		
-		//if (y <=0 || y >= Game.HEIGHT -32) velY *= -1;
+		
 		if (x <=0 || x >= Game.WIDTH -96) velX *= -1;
 		
 		handler.addObject(new BasicEnemyTrail(x,y,ID.BasicEnemyTrail,Color.red,96,96,0.1f,handler));
