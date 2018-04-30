@@ -9,12 +9,12 @@ public class FastEnemy extends GameObject {
 
 	
 	private Handler handler;
-	public FastEnemy(int x, int y, ID id,Handler handler) {
+	public FastEnemy(int x, int y, ID id,Handler handler) { //LOOK AT BASIC ENEMY COMMENTS EVERYTHING IS THE SAME EXCEPT ENEMY VELOCITY 
 		super(x, y, id);
 		
 		this.handler = handler;
 		velX = 2;
-		velY = 10;
+		velY = 10; // Makes this enemy faster than basic enemy 
 		
 	}
 
