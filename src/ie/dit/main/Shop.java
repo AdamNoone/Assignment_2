@@ -7,15 +7,15 @@ import java.awt.Graphics;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class Shop extends MouseAdapter {
+public class Shop extends MouseAdapter {//need to extend mouseAdapter so we can get input from mouse and keyboard 
 
 	
 	private Handler handler;
 	private HUD hud ;
 	
-	private int B1 = 500;
-	private int B2 = 500;
-	private int B3 = 500;
+	private int B1 = 500; //used to control upgrade health 
+	private int B2 = 500; //used to control upgrade speed 
+	private int B3 = 500; //used to control refill health 
 
 	public Shop(Handler handler,HUD hud)
 	{
@@ -29,7 +29,7 @@ public class Shop extends MouseAdapter {
 		g.setFont(new Font ("arial",0,48));
 		g.drawString("SHOP", Game.WIDTH/2-80, 50);
 		
-		//1st item 
+		//upgrade health 
 		g.setFont(new Font ("arial",0,12));
 		g.setColor(Color.white);
 		g.drawString("Upgrade Health", 110, 120);
@@ -37,14 +37,14 @@ public class Shop extends MouseAdapter {
 		g.setColor(Color.yellow);
 		g.drawRect(100, 100, 100, 80);
 		
-		//2nd item 
+		//upgrade speed 
 				g.setColor(Color.white);
 				g.drawString("Upgrade Speed", 260, 120);
 				g.drawString("Cost : " + B2, 260, 140);
 				g.setColor(Color.blue);
 				g.drawRect(250, 100, 100, 80);
 				
-		//3rd item 
+		//refill health  
 				g.setColor(Color.white);
 				g.drawString("Refill Health", 410, 120);
 				g.drawString("Cost : " + B3, 410, 140);
@@ -72,9 +72,19 @@ public class Shop extends MouseAdapter {
 				if (hud.getScore() >= B1)
 				{
 					hud.setScore(hud.getScore() - B1);
+					if (B1 < 2501)
+					{
 					B1 += 1000;
 					hud.bounds += 20;
 					HUD.HEALTH = (100 + (hud.bounds /2));
+					}
+					else
+					{
+						B1 += 100000;
+						
+						hud.bounds += 0;
+					}
+					
 				}
 			}
 		}

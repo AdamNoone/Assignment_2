@@ -10,7 +10,7 @@ import java.util.Random;
 
 import ie.dit.main.Game.STATE;
 
-public class Menu extends MouseAdapter{ //need to extend mouseAdapter so we can get input fork mouse and keyboard 
+public class Menu extends MouseAdapter{ //need to extend mouseAdapter so we can get input from mouse and keyboard 
 
 	Game game;
 	private Handler handler;
