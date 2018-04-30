@@ -40,6 +40,7 @@ public class Menu extends MouseAdapter{
 			//handler.clearEnemies();
 			
 			//handler.addObject(new BasicEnemy (r.nextInt(Game.WIDTH),r.nextInt(Game.HEIGHT), ID.BasicEnemy,handler)); //add a new enemy
+			
 			game.gameState = STATE.Select;
 			return;
 		}
@@ -114,6 +115,9 @@ public class Menu extends MouseAdapter{
 						hud.setLevel(1);
 					    hud.setScore(0);
 					    handler.clearEnemies();
+					    
+					    
+					  
 						
 					    	return;
 					
@@ -165,20 +169,23 @@ public class Menu extends MouseAdapter{
 		
 		g.setFont(fnt);
 		g.setColor(Color.white);
-		g.drawString("Menu", 240, 70);
+		g.drawString("SquareHead", 165, 70);
 		
 		
 		g.setFont(fnt2);
-		
+		g.setColor(Color.green);
 		g.drawRect(210, 150, 200, 64);
+		g.setColor(Color.white);
 		g.drawString("Play", 270, 190);
 		
-		
+		g.setColor(Color.green);
 		g.drawRect(210, 250, 200, 64);
+		g.setColor(Color.white);
 		g.drawString("Help", 270, 290);
 		
-		
+		g.setColor(Color.green);
 		g.drawRect(210, 350, 200, 64);
+		g.setColor(Color.white);
 		g.drawString("Quit", 270, 390);
 		}
 		
@@ -199,7 +206,9 @@ public class Menu extends MouseAdapter{
 		g.drawString("Use Space to get upgrades for your player", 80, 230);
 		
 		g.setFont(fnt2);
+		g.setColor(Color.green);
 		g.drawRect(210, 350, 200, 64);
+		g.setColor(Color.white);
 		g.drawString("Back", 270, 390);
 		}
 		
@@ -219,7 +228,9 @@ public class Menu extends MouseAdapter{
 		g.drawString("Your Score was " + hud.getScore(), 225, 200);
 		
 		g.setFont(fnt2);
+		g.setColor(Color.green);
 		g.drawRect(210, 350, 200, 64);
+		g.setColor(Color.white);
 		g.drawString("Try Again", 245, 390);
 		}
 		else if(Game.gameState == STATE.Select)
@@ -231,20 +242,24 @@ public class Menu extends MouseAdapter{
 		
 		g.setFont(fnt);
 		g.setColor(Color.white);
-		g.drawString("SELECT DIFFICULTY", 100, 70);
+		g.drawString("SELECT DIFFICULTY", 70, 70);
 		
 		
 		g.setFont(fnt2);
 		
+		g.setColor(Color.green);
 		g.drawRect(210, 150, 200, 64);
-		g.drawString("Normal", 270, 190);
+		g.setColor(Color.white);
+		g.drawString("Normal", 260, 190);
 		
-		
+		g.setColor(Color.green);
 		g.drawRect(210, 250, 200, 64);
+		g.setColor(Color.white);
 		g.drawString("Hard", 270, 290);
 		
-		
+		g.setColor(Color.green);
 		g.drawRect(210, 350, 200, 64);
+		g.setColor(Color.white);
 		g.drawString("Back", 270, 390);
 		}
 		
