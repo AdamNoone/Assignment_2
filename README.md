@@ -1,2 +1,50 @@
 # Assignment_2
-A repo containing my 2nd O.O.P Assignment
+This repository contains Assignment 2 for O.O.P year 2
+
+Name of Project : SquareHead
+Team Member : Adam Noone
+Who did What ?? : Adam Noone did absolutely everything 
+
+
+You are SquareHead and your mission is to survive for as long as possible by dodging other enemy squares 
+
+
+•Click Play and then select your difficulty to start a game 
+
+•Click Help to learn how to play 
+
+•Click Quit to leave the game 
+
+
+•How to Play 
+
+W - Move Up
+A - Move Left
+D - Move Right
+S - Slow Down
+ 
+When in a game press SPACE to enter the shop and upgrade your character
+
+
+
+
+So How Did I Code My Assignment ?
+
+Before i touched the comptuter i got a pen and a piece of paper .I made a rough design of what i wanted my game to look like and i wrote down what i wanted it to do 
+(ie What Functionality it would have). I started by coding the Game engine and decideing what was going to be in my Game tick() and render() methods.Next i made the player class 
+and decided on things like player color and movement speed.I then implemented player movement using WASD .Now that I had a moving player it was time to move onto the enemies.
+
+next i set out making each enemy 
+- A basic red enemy
+- A Fast yellow enemy 
+- A pink enemy that follows the players around 
+- A boss that fires bullets at the players 
+
+Once all my enemies had been created i made a spawner class to handle what enemies spawned each time the user progressed to a new level and i also made a menu system and a shop 
+so the user cuold navigate around my game.
+
+
+
+
+
+
