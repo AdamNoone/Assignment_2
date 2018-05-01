@@ -46,11 +46,7 @@ so the user cuold navigate around my game.
 
 
 
-<a href="https://www.youtube.com/watch?v=ZO-9j1Djhq0&feature=youtu.be
-" target="_blank"><img src="http://img.youtube.com/vi/vecMCz1eB1s&feature=youtu.be/0.jpg" 
-alt="MY YOUTUBE VIDEO" width="240" height="180" border="10" /></a>
-
-<iframe width="1418" height="568" src="https://www.youtube.com/embed/ZO-9j1Djhq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+Heres a video of my game 
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZO-9j1Djhq0
 " target="_blank"><img src="http://img.youtube.com/vi/ZO-9j1Djhq0/0.jpg" 
